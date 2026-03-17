@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Júlia Ferreira</title>
+    <link rel="stylesheet" href="templatemo-prism-flux.css">
+</head>
+<body>
+    <!-- Tela de Carregamento -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-prism">
+                <div class="prism-face"></div>
+                <div class="prism-face"></div>
+                <div class="prism-face"></div>
+            </div>
+            <div style="color: var(--accent-purple); font-size: 18px; text-transform: uppercase; letter-spacing: 3px;">Carregando Portfolio</div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho de Navegação -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo">
+    <span class="logo-text">
+        <span class="prism">Portifólio - Júlia Ferreira</span>
+        <span class="flux"></span>
+    </span>
+</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Aplicativos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Hero com Carrossel 3D -->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Itens gerados por JS -->
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">‹</button>
+                <button class="carousel-btn" id="nextBtn">›</button>
+            </div>
+                   <div class="philosophy-particles" id="particles"></div>
+            <div class="carousel-indicators" id="indicators">
+                <!-- Indicadores gerados por JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Filosofia Prism (Sobre) -->
+    <section class="philosophy-section" id="about">
+        <div class="philosophy-container">
+            <div class="prism-line"></div>
+            
+            <h2 class="philosophy-headline">
+                Sobre <br> Mim
+            </h2>
+            
+            <p class="philosophy-subheading">
+                Me chamo Júlia, sou estudante de Cinema e Audiovisual pela PUC Minas. Sou editora de vídeos, designer gráfica há 6 anos e apaixonada por cultura alternativa e mostrar minha visão do mundo através de imagens. Já participei de projetos que vão de curtas-metragens, vídeos promocionais para trafégo e gerenciamento para redes sociais. 
+            </p>
+            
+            <div class="philosophy-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🎬</div>
+                    <h3 class="pillar-title">FILMAKKER</h3>
+                    <p class="pillar-description">
+                        Histórias contadas com ritmo, emoção e clareza visual.
+                    </p>
+                </div>
+                
+                <div class="pillar">
+                    <div class="pillar-icon">⚡</div>
+                    <h3 class="pillar-title">EDIÇÃO</h3>
+                    <p class="pillar-description">
+                        Cortes precisos, fluidez e impacto em cada frame.
+                    </p>
+                </div>
+                
+                <div class="pillar">
+                    <div class="pillar-icon">✨</div>
+                    <h3 class="pillar-title">EFEITOS</h3>
+                    <p class="pillar-description">
+                        Transições sutis e efeitos que reforçam a narrativa sonoros, sem roubar a cena.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="philosophy-particles" id="particles"></div>
+        </div>
+    </section>
+
+    <!-- Arsenal Técnico -->
+    <section class="skills-section" id="skills">
+        <div class="skills-container">
+            <div class="section-header">
+                <h2 class="section-title">Dominios de Programas</h2>
+                <p class="section-subtitle">Programas que domino e uso no meu trabalho</p>
+            </div>
+            
+            <div class="skill-categories">
+                <div class="category-tab active" data-category="all">Todas</div>
+                <!-- <div class="category-tab" data-category="frontend">Frontend</div>
+                <div class="category-tab" data-category="backend">Backend</div>
+                <div class="category-tab" data-category="cloud">Nuvem & DevOps</div>
+                <div class="category-tab" data-category="emerging">Tecnologias Emergentes</div> -->
+            </div>
+
+            <div class="skills-hexagon-grid" id="skillsGrid"></div>
+            <div class="philosophy-particles" id="particles"></div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Conexão</h2>
+            <p class="section-subtitle">Pronto para transformar sua ideia em realidade? Vamos conversar.</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <a  target="_blank" class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h4>Localização</h4>
+                        <p>Belo Horizonte - MG</p>
+                    </div>
+                </a>
+                
+                <a  class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-text">
+                        <h4>E-mail</h4>
+                        <p>juliasoareszf@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a  class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-text">
+                        <h4>Telefone</h4>
+                        <p>+55 (31) 987030355</p>
+                               <div class="philosophy-particles" id="particles"></div>
+                    </div>
+                </a>
+                
+                <!-- <a href="#" target="_blank" class="info-item">
+                    <div class="info-icon">📅</div>
+                    <div class="info-text">
+                        <h4>Agendar Reunião</h4>
+                        <p>Marcar uma consultoria</p>
+                    </div>
+                </a> -->
+            </div>
+            
+            <!-- <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Transmitir Mensagem</button>
+            </form> -->
+        </div>
+    </section>
+
+    <!-- <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-text">
+                        <span class="prism">PRISM</span>
+                        <span class="flux">FLUX</span>
+                    </span>
+                </div>
+                <p class="footer-description">
+                    Refratando desafios complexos em soluções brilhantes através da convergência entre arte e ciência.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <div class="footer-links">
+                    <a href="#">Desenvolvimento Web</a>
+                    <a href="#">Aplicativos Móveis</a>
+                    <a href="#">Soluções em Nuvem</a>
+                    <a href="#">Integração de IA</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <div class="footer-links">
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Nossa Equipe</a>
+                    <a href="#">Carreiras</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <div class="footer-links">
+                    <a href="#">Documentação</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Suporte</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2026 PRISM FLUX. Todos os direitos reservados.
+            </div>
+            <div class="footer-credits">
+                Design por <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>
+            </div>
+        </div>
+    </footer> -->
+    <script src="templatemo-prism-scripts.js"></script>
+</body>
+</html>

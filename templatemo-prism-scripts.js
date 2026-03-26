@@ -5,7 +5,7 @@ const portfolioData = [
         title: 'Designs Gráficos',
         description: 'Imagens para aumentar a credibilidade e confiança do seu négocio!',
         tech: ['Photoshop', 'Figma'],
-        link: 'https://www.behance.net/gallery/245643923/Exemplos-de-Design'
+        link: 'https://www.instagram.com/p/DWO0n3zAA1B/?igsh=Y25vbGR4eW8wd3Np'
     },
     {
         id: 2,

@@ -24,9 +24,9 @@ const portfolioData = [
       {
         id: 4,
         title: 'Curtas',
-        description: 'Imersão de Histórias.',
+        description: 'Imersão de Histórias, um projeto feito por estudantes de cinema.',
         tech: ['Longos', 'After Effects' ],
-        link: 'https://www.youtube.com/watch?v=49bk2s8qJuU&list=LL&index=1&t=227s'
+        link: 'https://www.youtube.com/@CineDivas'
     },
     // {
     //     id: 4,

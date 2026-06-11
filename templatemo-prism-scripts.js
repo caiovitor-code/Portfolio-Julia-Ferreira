@@ -87,7 +87,6 @@ function createCarouselItem(data, index) {
     item.innerHTML = `
         <div class="card">
             <div class="card-number">0${data.id}</div>
-            <div class="card-image">
                 <img src="${data.image}" alt="${data.title}">
             </div>
             <h3 class="card-title">${data.title}</h3>

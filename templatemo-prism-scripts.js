@@ -229,3 +229,222 @@ const scale = isMobile ? 0.65 : 0.6;
 item.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(-450px) rotateY(${-sign * rotation}deg) scale(${scale})`;
 item.style.opacity = '0.3';
 item.style.zIndex = '2';
+} else {
+item.style.transform = 'translate(-50%, -50%) translateZ(-500px) scale(0.5)';
+item.style.opacity = '0';
+item.style.zIndex = '1';
+}
+});
+
+indicators.forEach((indicator, index) => {
+indicator.classList.toggle('active', index === currentIndex);
+});
+}
+
+function nextSlide() {
+currentIndex = (currentIndex + 1) % portfolioData.length;
+updateCarousel();
+}
+
+function prevSlide() {
+currentIndex = (currentIndex - 1 + portfolioData.length) % portfolioData.length;
+updateCarousel();
+}
+
+function goToSlide(index) {
+currentIndex = index;
+updateCarousel();
+}
+
+// Inicialização da grade hexagonal de habilidades
+function initSkillsGrid() {
+const skillsGrid = document.getElementById('skillsGrid');
+const categoryTabs = document.querySelectorAll('.category-tab');
+if (!skillsGrid) return;
+
+function displaySkills(category = 'all') {
+skillsGrid.innerHTML = '';
+
+const filteredSkills = category === 'all' 
+? skillsData 
+: skillsData.filter(skill => skill.category === category);
+
+filteredSkills.forEach((skill, index) => {
+const hexagon = document.createElement('div');
+hexagon.className = 'skill-hexagon';
+hexagon.style.animationDelay = `${index * 0.1}s`;
+
+hexagon.innerHTML = `
+               <div class="hexagon-inner">
+                   <div class="hexagon-content">
+                       <div class="skill-icon-hex">${skill.icon}</div>
+                       <div class="skill-name-hex">${skill.name}</div>
+                       <div class="skill-level">
+                           <div class="skill-level-fill" style="width: ${skill.level}%"></div>
+                       </div>
+                       <div class="skill-percentage-hex">${skill.level}%</div>
+                   </div>
+               </div>
+           `;
+
+skillsGrid.appendChild(hexagon);
+});
+}
+
+categoryTabs.forEach(tab => {
+tab.addEventListener('click', () => {
+categoryTabs.forEach(t => t.classList.remove('active'));
+tab.classList.add('active');
+displaySkills(tab.dataset.category);
+});
+});
+
+displaySkills();
+}
+
+// Controles do Carrossel
+if(document.getElementById('nextBtn')) document.getElementById('nextBtn').addEventListener('click', nextSlide);
+if(document.getElementById('prevBtn')) document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+// Rotação automática
+let autoSlide = setInterval(nextSlide, 5000);
+
+// Navegação por teclado
+document.addEventListener('keydown', (e) => {
+if (e.key === 'ArrowLeft') prevSlide();
+if (e.key === 'ArrowRight') nextSlide();
+});
+
+window.addEventListener('resize', () => {
+updateCarousel();
+});
+
+// Inicializar tudo ao carregar
+window.addEventListener('DOMContentLoaded', () => {
+initCarousel();
+initSkillsGrid();
+initParticles();
+});
+
+// Alternar menu móvel
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+if(menuToggle) {
+menuToggle.addEventListener('click', () => {
+navMenu.classList.toggle('active');
+menuToggle.classList.toggle('active');
+});
+}
+
+// Cabeçalho
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 100) {
+header.classList.add('scrolled');
+} else {
+header.classList.remove('scrolled');
+}
+});
+
+// Rolagem suave
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').substring(1);
+const targetSection = document.getElementById(targetId);
+
+if (targetSection) {
+const headerHeight = header.offsetHeight;
+const targetPosition = targetSection.offsetTop - headerHeight;
+
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+
+if(navMenu) navMenu.classList.remove('active');
+if(menuToggle) menuToggle.classList.remove('active');
+}
+});
+});
+
+function updateActiveNav() {
+const scrollPosition = window.scrollY + 100;
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.offsetHeight;
+const sectionId = section.getAttribute('id');
+
+if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+navLinks.forEach(link => {
+link.classList.remove('active');
+const href = link.getAttribute('href').substring(1);
+if (href === sectionId) {
+link.classList.add('active');
+}
+});
+}
+});
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
+// Contador
+function animateCounter(element) {
+const target = parseInt(element.dataset.target);
+const duration = 2000;
+const step = target / (duration / 16);
+let current = 0;
+
+const counter = setInterval(() => {
+current += step;
+if (current >= target) {
+element.textContent = target;
+clearInterval(counter);
+} else {
+element.textContent = Math.floor(current);
+}
+}, 16);
+}
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const statNumbers = entry.target.querySelectorAll('.stat-number');
+statNumbers.forEach(number => {
+if (!number.classList.contains('animated')) {
+number.classList.add('animated');
+animateCounter(number);
+}
+});
+}
+});
+}, { threshold: 0.5 });
+
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) observer.observe(statsSection);
+
+// Formulário
+const contactForm = document.getElementById('contactForm');
+if(contactForm) {
+contactForm.addEventListener('submit', (e) => {
+e.preventDefault();
+const formData = new FormData(contactForm);
+const data = Object.fromEntries(formData);
+alert(`Obrigado ${data.name}! Mensagem enviada.`);
+contactForm.reset();
+});
+}
+
+// Loader
+window.addEventListener('load', () => {
+setTimeout(() => {
+const loader = document.getElementById('loader');
+if(loader) loader.classList.add('hidden');
+}, 1500);
+});

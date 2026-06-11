@@ -4,179 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Júlia Ferreira</title>
+
     <link rel="stylesheet" href="templatemo-prism-flux.css">
 </head>
+
 <body>
-    <!-- Tela de Carregamento -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-prism">
-                <div class="prism-face"></div>
-                <div class="prism-face"></div>
-                <div class="prism-face"></div>
-            </div>
-            <div style="color: var(--accent-purple); font-size: 18px; text-transform: uppercase; letter-spacing: 3px;">Carregando Portfolio</div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-content">
+        <div class="loader-prism">
+            <div class="prism-face"></div>
+            <div class="prism-face"></div>
+            <div class="prism-face"></div>
+        </div>
+        <div style="color: var(--accent-purple); font-size: 18px; text-transform: uppercase; letter-spacing: 3px;">
+            Carregando Portfólio
         </div>
     </div>
+</div>
 
-    <!-- Cabeçalho de Navegação -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="#home" class="logo">
-    <span class="logo-text">
-        <span class="prism">Portfólio - Júlia Ferreira</span>
-        <span class="flux"></span>
-    </span>
-</a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Início</a></li>
-                <li><a href="#about" class="nav-link">Sobre</a></li>
-                <li><a href="#skills" class="nav-link">Aplicativos</a></li>
-                <li><a href="#contact" class="nav-link">Contato</a></li>
-            </ul>
-            
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header class="header" id="header">
+    <nav class="nav-container">
 
-    <!-- Seção Hero com Carrossel 3D -->
-    <section class="hero" id="home">
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <!-- Itens gerados por JS -->
-            </div>
-            
-            <div class="carousel-controls">
-                <button class="carousel-btn" id="prevBtn">‹</button>
-                <button class="carousel-btn" id="nextBtn">›</button>
-            </div>
-                   <div class="philosophy-particles" id="particles"></div>
-            <div class="carousel-indicators" id="indicators">
-                <!-- Indicadores gerados por JS -->
-            </div>
+        <a href="#home" class="logo">
+            <span class="logo-text">
+                <span class="prism">Portfólio - Júlia Ferreira</span>
+            </span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Início</a></li>
+            <li><a href="#about" class="nav-link">Sobre</a></li>
+            <li><a href="#skills" class="nav-link">Aplicativos</a></li>
+            <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </section>
 
-    <!-- Seção Filosofia Prism (Sobre) -->
-    <section class="philosophy-section" id="about">
-        <div class="philosophy-container">
-            <div class="prism-line"></div>
-            
-            <h2 class="philosophy-headline">
-                Sobre <br> Mim
-            </h2>
-            
-            <p class="philosophy-subheading">
-                Me chamo Júlia, sou estudante de Cinema e Audiovisual pela PUC Minas. Sou editora de vídeos, designer gráfica há 6 anos e apaixonada por cultura alternativa e mostrar minha visão do mundo através de imagens. Já participei de projetos que vão de curtas-metragens, vídeos promocionais para trafégo e gerenciamento para redes sociais. 
-            </p>
-            
-            <div class="philosophy-pillars">
-                <div class="pillar">
-                    <div class="pillar-icon">🎬</div>
-                    <h3 class="pillar-title">FILMAKKER E FOTÓGRAFA</h3>
-                    <p class="pillar-description">
-                        Histórias contadas com ritmo, emoção e clareza visual.
-                    </p>
-                </div>
-                
-                <div class="pillar">
-                    <div class="pillar-icon">⚡</div>
-                    <h3 class="pillar-title">EDIÇÃO</h3>
-                    <p class="pillar-description">
-                        Cortes precisos, fluidez e impacto em cada frame.
-                    </p>
-                </div>
-                
-                <div class="pillar">
-                    <div class="pillar-icon">✨</div>
-                    <h3 class="pillar-title">EFEITOS</h3>
-                    <p class="pillar-description">
-                        Transições sutis e efeitos que reforçam a narrativa sonoros, sem roubar a cena.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="philosophy-particles" id="particles"></div>
+    </nav>
+</header>
+
+<!-- HERO / CARROSSEL -->
+<section class="hero" id="home">
+    <div class="carousel-container">
+
+        <div class="carousel" id="carousel"></div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">‹</button>
+            <button class="carousel-btn" id="nextBtn">›</button>
         </div>
-    </section>
 
-    <!-- Arsenal Técnico -->
-    <section class="skills-section" id="skills">
-        <div class="skills-container">
-            <div class="section-header">
-                <h2 class="section-title">Dominios de Programas</h2>
-                <p class="section-subtitle">Programas que domino e uso no meu trabalho</p>
-            </div>
-            
-            <div class="skill-categories">
-                <div class="category-tab active" data-category="all">Todas</div>
-                <!-- <div class="category-tab" data-category="frontend">Frontend</div>
-                <div class="category-tab" data-category="backend">Backend</div>
-                <div class="category-tab" data-category="cloud">Nuvem & DevOps</div>
-                <div class="category-tab" data-category="emerging">Tecnologias Emergentes</div> -->
+        <div class="carousel-indicators" id="indicators"></div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="philosophy-section" id="about">
+
+    <div class="philosophy-container">
+
+        <div class="prism-line"></div>
+
+        <h2 class="philosophy-headline">
+            Sobre <br> Mim
+        </h2>
+
+        <p class="philosophy-subheading">
+            Me chamo Júlia, sou estudante de Cinema e Audiovisual pela PUC Minas. 
+            Sou editora de vídeos e designer gráfica há 6 anos.
+        </p>
+
+        <div class="philosophy-pillars">
+
+            <div class="pillar">
+                <div class="pillar-icon">🎬</div>
+                <h3>FILMMAKER E FOTÓGRAFA</h3>
+                <p>Histórias contadas com ritmo e emoção.</p>
             </div>
 
-            <div class="skills-hexagon-grid" id="skillsGrid"></div>
-            <div class="philosophy-particles" id="particles"></div>
+            <div class="pillar">
+                <div class="pillar-icon">⚡</div>
+                <h3>EDIÇÃO</h3>
+                <p>Cortes precisos e fluidez narrativa.</p>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-icon">✨</div>
+                <h3>EFEITOS</h3>
+                <p>Transições que reforçam a narrativa.</p>
+            </div>
+
         </div>
-    </section>
 
-    <!-- Seção de Contato -->
-    <section class="contact-section" id="contact">
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+
+    <div class="skills-container">
+
         <div class="section-header">
-            <h2 class="section-title">Conexão</h2>
-            <p class="section-subtitle">Pronto para transformar sua ideia em realidade? Vamos conversar.</p>
+            <h2 class="section-title">Domínios de Programas</h2>
+            <p class="section-subtitle">Ferramentas que utilizo no meu trabalho</p>
         </div>
-        
-        <div class="contact-container">
-            <div class="contact-info">
-                <a  target="_blank" class="info-item">
-                    <div class="info-icon">📍</div>
-                    <div class="info-text">
-                        <h4>Localização</h4>
-                        <p>Belo Horizonte - MG</p>
-                    </div>
-                </a>
-                
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=juliasoareszf@gmail.com"
-   target="_blank"
-   class="info-item">
-    <div class="info-icon">📧</div>
-    <div class="info-text">
-        <h4>E-mail</h4>
-        <p>juliasoareszf@gmail.com</p>
+
+        <div class="skill-categories">
+            <div class="category-tab active" data-category="all">Todas</div>
+        </div>
+
+        <div class="skills-hexagon-grid" id="skillsGrid"></div>
+
     </div>
-</a>
 
-              <a href="https://wa.me/5531987030355" class="info-item" target="_blank">
-    <div class="info-icon">📱</div>
-    <div class="info-text">
-        <h4>Telefone</h4>
-        <p>+55 (31) 98703-0355</p>
-        <div class="philosophy-particles" id="particles">
-            
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+
+    <div class="section-header">
+        <h2 class="section-title">Conexão</h2>
+        <p class="section-subtitle">Vamos conversar?</p>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                    <h4>Localização</h4>
+                    <p>Belo Horizonte - MG</p>
+                </div>
+            </div>
+
+            <a href="mailto:juliasoareszf@gmail.com" class="info-item">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                    <h4>E-mail</h4>
+                    <p>juliasoareszf@gmail.com</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5531987030355" class="info-item" target="_blank">
+                <div class="info-icon">📱</div>
+                <div class="info-text">
+                    <h4>Telefone</h4>
+                    <p>+55 (31) 98703-0355</p>
+                </div>
+            </a>
+
         </div>
 
+    </div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: 'en',
-      includedLanguages: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    },
-    'google_translate_element'
-  );
-}
-</script>
+</section>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="templatemo-prism-scripts.js"></script>
+<!-- SCRIPTS -->
+<script src="templatemo-prism-scripts.js"></script>
+
 </body>
 </html>

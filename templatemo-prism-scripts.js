@@ -28,38 +28,6 @@ const portfolioData = [
         tech: ['Longos', 'After Effects' ],
         link: 'https://www.youtube.com/@CineDivas'
     },
-    // {
-    //     id: 4,
-    //     title: 'Ciberdefesa',
-    //     description: 'Estrutura de cibersegurança de nível militar com detecção de ameaças em tempo real e resposta automatizada.',
-    //     image: 'images/cyber-defense.jpg',
-    //     tech: ['Zero Trust', 'IA Defense', 'Encryption'],
-    //     link: 'https://www.youtube.com/watch?v=mvtQc5wmbqM&t=1s4'
-    // },
-    // {
-    //     id: 5,
-    //     title: 'Nexus de Dados',
-    //     description: 'Plataforma de processamento de Big Data capaz de analisar petabytes de informações em tempo real.',
-    //     image: 'images/data-nexus.jpg',
-    //     tech: ['Apache Spark', 'Hadoop', 'Kafka'],
-    //     link: 'https://www.youtube.com/watch?v=mvtQc5wmbqM&t=1s'
-    // },
-    // {
-    //     id: 6,
-    //     title: 'Interface RA',
-    //     description: 'Sistema de realidade aumentada para visualização imersiva de dados e experiências interativas.',
-    //     image: 'images/ar-interface.jpg',
-    //     tech: ['Unity', 'ARCore', 'Visão Computacional'],
-    //     link: 'https://www.youtube.com/watch?v=mvtQc5wmbqM&t=1s'
-    // },
-    // {
-    //     id: 7,
-    //     title: 'Matriz IoT',
-    //     description: 'Ecossistema IoT inteligente conectando milhões de dispositivos com capacidades de computação de borda.',
-    //     image: 'images/iot-matrix.jpg',
-    //     tech: ['MQTT', 'Edge AI', '5G'],
-    //     link: 'https://www.youtube.com/watch?v=mvtQc5wmbqM&t=1s'
-    // }
 ];
 
 // Dados de Habilidades (Arsenal)
@@ -69,13 +37,6 @@ const skillsData = [
     { name: 'Cap Cut', icon: '', level: 100, category: 'frontend' },
     { name: 'Figma', icon: '', level: 100, category: 'cloud' },
     { name: 'Photoshop', icon: '', level: 100, category: 'cloud' },
-    // { name: 'Python', icon: '🐍', level: 93, category: 'backend' },
-    // { name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
-    // { name: 'GraphQL', icon: '◈', level: 87, category: 'backend' },
-    // { name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
-    // { name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
-    // { name: 'Vue.js', icon: '💚', level: 85, category: 'frontend' },
-    // { name: 'MongoDB', icon: '🍃', level: 90, category: 'backend' }
 ];
 
 // Função para abrir link externo

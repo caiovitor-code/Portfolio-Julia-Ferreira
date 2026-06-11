@@ -33,8 +33,7 @@ const portfolioData = [
         title: 'Cobertura de Eventos',
         description: 'Filmagem e fotografia das etapas mais marcantes do seu evento.',
         tech: ['Fotografia', 'Filmmaker' ],
-        link: 'https://www.instagram.com/reel/DW_z0LHDlfU/?igsh=anQ3bHQ4eDNta2Vv',
-        link 2: 'https://www.instagram.com/p/DO6zsbhifFF/?img_index=4&igsh=YmNpc2tobTlmd3gz'
+        link: 'https://www.instagram.com/reel/DW_z0LHDlfU/?igsh=anQ3bHQ4eDNta2Vv'
     },
 ];
 

@@ -1,4 +1,4 @@
-// Dados do portfólio para o carrossel
+/ // Dados do portfólio para o carrossel
 const portfolioData = [
    {
         id: 1,
@@ -31,7 +31,7 @@ const portfolioData = [
        {
         id: 5,
         title: 'Cobertura de Eventos',
-        description: 'Filmagem e fotografia das etapas mais marcantes do seu evento.',
+        description: 'Fotografia e filmagem de cada etapa marcante do seu evento.',
         tech: ['Fotografia', 'Filmmaker' ],
         link: 'https://www.instagram.com/reel/DW_z0LHDlfU/?igsh=anQ3bHQ4eDNta2Vv'
     },
@@ -81,19 +81,21 @@ function createCarouselItem(data, index) {
     item.dataset.index = index;
     
     const techBadges = data.tech.map(tech => 
-        `<span class="tech-badge">${tech}</span>`
+        <span class="tech-badge">${tech}</span>
     ).join('');
     
-    item.innerHTML = `
+    item.innerHTML = 
         <div class="card">
             <div class="card-number">0${data.id}</div>
+            <div class="card-image">
+                <img src="${data.image}" alt="${data.title}">
             </div>
             <h3 class="card-title">${data.title}</h3>
             <p class="card-description">${data.description}</p>
             <div class="card-tech">${techBadges}</div>
             <button class="card-cta" onclick="openProjectLink('${data.link}')">Explorar</button>
         </div>
-    `;
+    ;
     
     return item;
 }
@@ -164,21 +166,21 @@ function updateCarousel() {
             const translateX = sign * spacing1;
             const rotation = isMobile ? 25 : 30;
             const scale = isMobile ? 0.88 : 0.85;
-            item.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(-200px) rotateY(${-sign * rotation}deg) scale(${scale})`;
+            item.style.transform = translate(-50%, -50%) translateX(${translateX}px) translateZ(-200px) rotateY(${-sign * rotation}deg) scale(${scale});
             item.style.opacity = '0.8';
             item.style.zIndex = '5';
         } else if (absOffset === 2) {
             const translateX = sign * spacing2;
             const rotation = isMobile ? 35 : 40;
             const scale = isMobile ? 0.75 : 0.7;
-            item.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(-350px) rotateY(${-sign * rotation}deg) scale(${scale})`;
+            item.style.transform = translate(-50%, -50%) translateX(${translateX}px) translateZ(-350px) rotateY(${-sign * rotation}deg) scale(${scale});
             item.style.opacity = '0.5';
             item.style.zIndex = '3';
         } else if (absOffset === 3) {
             const translateX = sign * spacing3;
             const rotation = isMobile ? 40 : 45;
             const scale = isMobile ? 0.65 : 0.6;
-            item.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(-450px) rotateY(${-sign * rotation}deg) scale(${scale})`;
+            item.style.transform = translate(-50%, -50%) translateX(${translateX}px) translateZ(-450px) rotateY(${-sign * rotation}deg) scale(${scale});
             item.style.opacity = '0.3';
             item.style.zIndex = '2';
         } else {
@@ -224,9 +226,9 @@ function initSkillsGrid() {
         filteredSkills.forEach((skill, index) => {
             const hexagon = document.createElement('div');
             hexagon.className = 'skill-hexagon';
-            hexagon.style.animationDelay = `${index * 0.1}s`;
+            hexagon.style.animationDelay = ${index * 0.1}s;
             
-            hexagon.innerHTML = `
+            hexagon.innerHTML = 
                 <div class="hexagon-inner">
                     <div class="hexagon-content">
                         <div class="skill-icon-hex">${skill.icon}</div>
@@ -237,7 +239,7 @@ function initSkillsGrid() {
                         <div class="skill-percentage-hex">${skill.level}%</div>
                     </div>
                 </div>
-            `;
+            ;
             
             skillsGrid.appendChild(hexagon);
         });
@@ -388,7 +390,7 @@ if(contactForm) {
         e.preventDefault();
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        alert(`Obrigado ${data.name}! Mensagem enviada.`);
+        alert(Obrigado ${data.name}! Mensagem enviada.);
         contactForm.reset();
     });
 }

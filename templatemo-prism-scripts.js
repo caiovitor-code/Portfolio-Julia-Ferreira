@@ -28,6 +28,13 @@ const portfolioData = [
         tech: ['Longos', 'After Effects' ],
         link: 'https://www.youtube.com/@CineDivas'
     },
+       {
+        id: 5,
+        title: 'Cobertura de Eventos',
+        description: 'Imersão de Histórias, um projeto feito por estudantes de cinema.',
+        tech: ['Fotografia', 'Filmmaker' ],
+        link: 'https://www.instagram.com/reel/DW_z0LHDlfU/?igsh=anQ3bHQ4eDNta2Vv'
+    },
 ];
 
 // Dados de Habilidades (Arsenal)
